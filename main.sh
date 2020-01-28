@@ -1,6 +1,6 @@
 #!/bin/sh
 docker-compose down
-echo "docker-clusteropenmpi_head_1">get_hosts.sh.txt
+echo "docker-cluster-openmpi_head_1">get_hosts.sh.txt
 NNODES=3
 for (( c=1; c<=${NNODES}; c++ ))
 do
