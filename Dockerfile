@@ -59,9 +59,9 @@ RUN chmod -R 600 ${SSHDIR}* && \
 
 USER root
 
-RUN rm -fr ${HOME}/.openmpi && mkdir -p ${HOME}/.openmpi
-ADD default-mca-params.conf ${HOME}/.openmpi/mca-params.conf
-RUN chown -R ${USER}:${USER} ${HOME}/.openmpi
+#RUN rm -fr ${HOME}/.openmpi && mkdir -p ${HOME}/.openmpi
+#ADD default-mca-params.conf ${HOME}/.openmpi/mca-params.conf
+#RUN chown -R ${USER}:${USER} ${HOME}/.openmpi
 
 # ------------------------------------------------------------
 # Copy MPI4PY example scripts
