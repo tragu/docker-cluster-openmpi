@@ -1,0 +1,42 @@
+
+#version: "2"
+#services:
+#  registry:
+#    images: registry
+#    ports: "5000:5000"
+#  mpi_head:
+      #build: .
+#      image: localhost:5000/mpi_try
+#      ports: 
+#        - "22"
+#      networks: 
+#        - net1
+
+#  mpi_node:
+      #build: .
+#      image: localhost:5000/mpi_try
+#      networks:
+#        - net1
+#networks:
+#  net1:
+
+version: "2"
+
+services:
+  mpi_head:
+    #build: .
+    image: openmpi
+    ports: 
+      - "22"
+    networks:
+      - net
+
+  mpi_node:
+    #build: .
+    image: openmpi
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
